@@ -5,8 +5,15 @@
     - [Copy AFD & Compile with NASM & Debug in DosBox](#command-for-copy-afd-compile-using-nasm-and-run-with-afd-in-dosbox)
 
 # Prerequisites
-
 Download [**AFD**](https://github.com/AbdullahBRashid/Assembly-Tools/blob/main/afd.exe) and copy it to `$HOME` to follow easily.\
+
+Run in terminal:
+```ps1
+curl "https://raw.githubusercontent.com/AbdullahBRashid/Assembly-Tools/main/afd.exe" -o $HOME/afd.exe
+```
+
+OR
+
 Run in terminal:
 ```ps1
 # PATH to AFD
@@ -18,6 +25,7 @@ if (PathName != "") {
     echo "Please fix the PathName variable correctly."
 }
 ```
+
 
 Download [**Netwide Assembler (NASM)**](https://www.nasm.us), and add it to PATH.\
 Download [**DosBox**](https://www.dosbox.com), and add it to PATH.

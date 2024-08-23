@@ -5,7 +5,9 @@
     - [Copy AFD & Compile with NASM & Debug in DosBox](#command-for-copy-afd-compile-using-nasm-and-run-with-afd-in-dosbox)
 
 # Prerequisites
-Download [**AFD**](https://github.com/AbdullahBRashid/Assembly-Tools/blob/main/afd.exe) and copy it to `$HOME` to follow easily.\
+Download [**AFD**](https://github.com/AbdullahBRashid/Assembly-Tools/blob/main/afd.exe) and copy it to `$HOME` to follow easily.
+
+OR
 
 Run in terminal:
 ```ps1
@@ -66,4 +68,57 @@ Copy the below snippet in `settings.json` file.
     }
     ...
 }
+```
+
+## Windows Shell
+
+Replace \<filename> with name of file.
+
+### Compiling
+
+With list file:
+
+```ps1
+nasm <filename>.asm -l <filename>.lst -o <filename>.com
+```
+
+Without list file:
+
+```ps1
+nasm <filename>.asm -o <filename>.com
+```
+
+### Running AFD with DosBox
+
+Ensure **AFD** and the **.com** Binary are in the directory of command execution.
+
+```ps1
+dosbox -c "mount C ." -c "C: " -c "afd <filename>.com"
+```
+
+
+## Linux Shell
+
+Replace \<filename> with name of file.
+
+### Compiling
+
+With list file:
+
+```sh
+$ nasm <filename>.asm -l <filename>.lst -o <filename>.com
+```
+
+Without list file:
+
+```sh
+$ nasm <filename>.asm -o <filename>.com
+```
+
+### Running AFD with DosBox
+
+Ensure **AFD** and the **.com** Binary are in the directory of command execution.
+
+```sh
+$ dosbox -c "mount C ." -c "C: " -c "afd <filename>.com"
 ```

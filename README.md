@@ -1,8 +1,19 @@
 # Contents
+- [Easy Install](#easy-installation)
+    - [Windows](#windows---easy-installation)
+
 - [Prerequisites](#prerequisites)
 - [Usages](#usages)
   - [VS Code - Code Runner](#vs-code---code-runner)
     - [Copy AFD & Compile with NASM & Debug in DosBox](#command-for-copy-afd-compile-using-nasm-and-run-with-afd-in-dosbox)
+
+# Easy Installation
+## Windows - Easy Installation
+Run in PowerShell:
+```ps1
+curl "https://raw.githubusercontent.com/AbdullahBRashid/Assembly-Tools/dev/afd-setup.ps11" -o ./afd-setup.ps1
+powershell ./afd-setup.ps1
+```
 
 # Prerequisites
 Download [**AFD**](https://github.com/AbdullahBRashid/Assembly-Tools/blob/main/afd.exe) and copy it to `$HOME` to follow easily.

@@ -23,6 +23,12 @@ curl "https://raw.githubusercontent.com/AbdullahBRashid/Assembly-Tools/main/afd-
 powershell ./afd-setup.ps1
 ```
 
+After setup.
+cd to the working directory with the assembly file and run:
+```ps1
+afd <filename.asm> # Replace <filenmae.asm> with your filename.
+```
+
 # Prerequisites
 Download [**AFD**](https://github.com/AbdullahBRashid/Assembly-Tools/blob/main/afd.exe) and copy it to `$HOME` to follow easily.
 

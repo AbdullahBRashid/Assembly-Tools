@@ -11,7 +11,7 @@
 ## Windows - Easy Installation
 Run in PowerShell:
 ```ps1
-curl "https://raw.githubusercontent.com/AbdullahBRashid/Assembly-Tools/dev/afd-setup.ps11" -o ./afd-setup.ps1
+curl "https://raw.githubusercontent.com/AbdullahBRashid/Assembly-Tools/dev/afd-setup.ps1" -o ./afd-setup.ps1
 powershell ./afd-setup.ps1
 ```
 

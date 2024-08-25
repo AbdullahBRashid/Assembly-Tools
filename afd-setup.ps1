@@ -48,16 +48,6 @@ if (!(Test-Path -Path $HOME/Assembly-Tools/afd-run.ps1)) {
 # Check profile
 if (Test-Path -Path $PROFILE) {
     Write-Output "Profile exists. Adding AFD function..."
-    Add-Content -Path $PROFILE -Value "Import-Module $HOME/Assembly-Tools/afd-run.ps1"
-    if (!($?)) {
-        Write-Error "Error adding AFD function to profile. Please try again."
-        return
-    }
-    Add-Content -Path $PROFILE -Value "Export-ModuleMember -Function afd"
-    if (!($?)) {
-        Write-Error "Error adding AFD function to profile. Please try again."
-        return
-    }
 } else {
     Write-Output "Profile does not exist. Creating profile..."
     New-Item -Path $PROFILE -ItemType File
@@ -65,16 +55,12 @@ if (Test-Path -Path $PROFILE) {
         Write-Error "Error creating profile. Please try again."
         return 
     }
-    Add-Content -Path $PROFILE -Value "Import-Module $HOME/Assembly-Tools/afd-run.ps1"
-    if (!($?)) {
-        Write-Error "Error adding AFD function to profile. Please try again."
-        return 
-    }
-    Add-Content -Path $PROFILE -Value "Export-ModuleMember -Function afd"
-    if (!($?)) {
-        Write-Error "Error adding AFD function to profile. Please try again."
-        return 
-    }
 }
+
+Add-Content -Path $PROFILE -Value "`r`nImport-Module $HOME/Assembly-Tools/afd-run.ps1"
+    if (!($?)) {
+        Write-Error "Error adding AFD function to profile. Please try again."
+        return
+    }
 
 Write-Output "Installation complete. Please restart your terminal."

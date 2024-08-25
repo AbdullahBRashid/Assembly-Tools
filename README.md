@@ -1,8 +1,33 @@
 # Contents
+- [Easy Install](#easy-installation)
+    - [Windows](#windows---easy-installation)
+
 - [Prerequisites](#prerequisites)
 - [Usages](#usages)
   - [VS Code - Code Runner](#vs-code---code-runner)
     - [Copy AFD & Compile with NASM & Debug in DosBox](#command-for-copy-afd-compile-using-nasm-and-run-with-afd-in-dosbox)
+
+# Easy Installation
+## Windows - Easy Installation
+
+First Run in PowerShell (As Admin):
+```ps1
+Set-ExecutionPolicy Bypass
+```
+
+Install [winget](https://aka.ms/getwinget), if not installed already.
+
+Run in PowerShell (Non Admin):
+```ps1
+curl "https://raw.githubusercontent.com/AbdullahBRashid/Assembly-Tools/main/afd-setup.ps1" -o ./afd-setup.ps1
+powershell ./afd-setup.ps1
+```
+
+After setup.
+cd to the working directory with the assembly file and run:
+```ps1
+afd <filename.asm> # Replace <filenmae.asm> with your filename.
+```
 
 # Prerequisites
 Download [**AFD**](https://github.com/AbdullahBRashid/Assembly-Tools/blob/main/afd.exe) and copy it to `$HOME` to follow easily.

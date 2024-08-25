@@ -19,7 +19,7 @@ Install [winget](https://aka.ms/getwinget), if not installed already.
 
 Run in PowerShell (Non Admin):
 ```ps1
-curl "https://raw.githubusercontent.com/AbdullahBRashid/Assembly-Tools/main/afd-setup.ps11" -o ./afd-setup.ps1
+curl "https://raw.githubusercontent.com/AbdullahBRashid/Assembly-Tools/main/afd-setup.ps1" -o ./afd-setup.ps1
 powershell ./afd-setup.ps1
 ```
 

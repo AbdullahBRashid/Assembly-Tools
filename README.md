@@ -9,9 +9,17 @@
 
 # Easy Installation
 ## Windows - Easy Installation
-Run in PowerShell:
+
+First Run in PowerShell (As Admin):
 ```ps1
-curl "https://raw.githubusercontent.com/AbdullahBRashid/Assembly-Tools/dev/afd-setup.ps11" -o ./afd-setup.ps1
+Set-ExecutionPolicy Bypass
+```
+
+Install [winget](https://aka.ms/getwinget), if not installed already.
+
+Run in PowerShell (Non Admin):
+```ps1
+curl "https://raw.githubusercontent.com/AbdullahBRashid/Assembly-Tools/main/afd-setup.ps11" -o ./afd-setup.ps1
 powershell ./afd-setup.ps1
 ```
 

@@ -44,5 +44,5 @@ Function afd ($name) {
         return "Error copying AFD."
     }
     
-    dosbox-x -c "mount C ." -c "C:" -c "afd $nameWithoutExt.com"
+    dosbox-x -nogui -c "mount C ." -c "C:" -c "afd $nameWithoutExt.com"
 }

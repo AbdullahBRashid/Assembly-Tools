@@ -38,11 +38,6 @@ Function afd ($name) {
     if (!(Test-Path -Path $HOME/Assembly-Tools/afd.exe)) {
         return "AFD not found. Please run setup script first."
     }
-
-    Copy-Item $HOME/Assembly-Tools/afd.exe .
-    if (!($?)) {
-        return "Error copying AFD."
-    }
     
-    dosbox-x -nogui -c "mount C ." -c "C:" -c "afd $nameWithoutExt.com"
+    dosbox-x -nogui -c "set home=$home" -c "mount A '%home%\Assembly-Tools'" -c "mount C ." -c "C:" -c "A:\afd.exe $nameWithoutExt.com"
 }

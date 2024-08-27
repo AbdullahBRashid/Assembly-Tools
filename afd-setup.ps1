@@ -17,6 +17,11 @@ if (!(Test-Path -Path $HOME/Assembly-Tools/afd.exe)) {
 }
 
 # Install NASM and DOSBox-X
+winget --version
+if (!($?)) {
+    Write-Error "Winget not found. Please install Windows Package Manager (winget) first."
+    return
+}
 $nasm_path = "$HOME/APPDATA/Local/bin/NASM"
 if (!(Test-Path -Path $nasm_path)) {
     winget install nasm
@@ -73,7 +78,7 @@ if (Test-Path -Path $PROFILE) {
     }
 }
 
-Add-Content -Path $PROFILE -Value "`r`nImport-Module $HOME/Assembly-Tools/afd-run.ps1"
+Add-Content -Path $PROFILE -Value "`r`nImport-Module `"$HOME/Assembly-Tools/afd-run.ps1`""
 if (!($?)) {
     Write-Error "Error adding AFD function to profile. Please try again."
     return
